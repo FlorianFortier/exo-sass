@@ -1,0 +1,8 @@
+.card {
+@include container ($shadow: #555);
+}
+.card--alter {
+@include container ($shadow: red, $btn-color: red);
+}
+
+    

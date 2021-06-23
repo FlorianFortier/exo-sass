@@ -1,0 +1,42 @@
+@mixin container ($box-width: box-width, $shadow: #555, $btn-color: $btn-color) {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 80rem;
+    max-height: 60rem;
+    width: 100%;
+    padding: 4rem;
+    margin-bottom: 3rem;
+    box-shadow: 1px 1px 4px $shadow;
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .card-title  {
+            margin-top: 1rem;
+            font-weight: 800;
+            line-height: 3rem;
+        }
+        .card-link {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $btn-color;
+            padding: 1rem;
+            color: $text-color-btn;
+            box-shadow: 0 0 1px rgba($btn-color, .25);
+            .card-link
+            &:hover,
+            &:focus {
+                background-color: darkgrey;
+                color: white;
+            }
+        }
+        .card-img {
+            object-fit: cover;
+            width: 100%;
+            min-height: 60%;
+        }
+    }
+}
